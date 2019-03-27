@@ -1,0 +1,141 @@
+{
+	"_type": "export",
+	"__export_format": 3,
+	"__export_date": "2019-03-27T11:26:11.627Z",
+	"__export_source": "insomnia.desktop.app:v6.3.2",
+	"resources": [
+		{
+			"_id": "wrk_350ccf77afc64370bf7e66cd706e3950",
+			"created": 1553586416937,
+			"description": "",
+			"modified": 1553586416937,
+			"name": "YTspecial",
+			"parentId": null,
+			"_type": "workspace"
+		},
+		{
+			"_id": "env_730c4820629b4a5e88134748d9aa5c36",
+			"color": null,
+			"created": 1553586416975,
+			"data": {
+				"baseUrl": "http://localhost:6001"
+			},
+			"isPrivate": false,
+			"metaSortKey": 1553586416975,
+			"modified": 1553675941654,
+			"name": "New Environment",
+			"parentId": "wrk_350ccf77afc64370bf7e66cd706e3950",
+			"_type": "environment"
+		},
+		{
+			"_id": "jar_2c5c529fe7ba4e0888e15aee5f712b44",
+			"cookies": [],
+			"created": 1553586416979,
+			"modified": 1553685952285,
+			"name": "Default Jar",
+			"parentId": "wrk_350ccf77afc64370bf7e66cd706e3950",
+			"_type": "cookie_jar"
+		},
+		{
+			"_id": "fld_9583d566e0e04dc9b0106684e3ec93c9",
+			"created": 1553586448980,
+			"description": "",
+			"environment": {},
+			"metaSortKey": -1553586448980,
+			"modified": 1553586448980,
+			"name": "Videos",
+			"parentId": "wrk_350ccf77afc64370bf7e66cd706e3950",
+			"_type": "request_group"
+		},
+		{
+			"_id": "env_56cb61faf78245549f16beab796fd278",
+			"color": null,
+			"created": 1553586438258,
+			"data": {},
+			"isPrivate": false,
+			"metaSortKey": 1553586438258,
+			"modified": 1553586441509,
+			"name": "Local",
+			"parentId": "env_730c4820629b4a5e88134748d9aa5c36",
+			"_type": "environment"
+		},
+		{
+			"_id": "req_b8b9c3944d4d4c1cb5a1f4315431b9d3",
+			"authentication": {},
+			"body": {},
+			"created": 1553586456489,
+			"description": "",
+			"headers": [],
+			"isPrivate": false,
+			"metaSortKey": -1553586456489,
+			"method": "GET",
+			"modified": 1553685919412,
+			"name": "Search",
+			"parameters": [],
+			"parentId": "fld_9583d566e0e04dc9b0106684e3ec93c9",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "{{ baseUrl  }}/videos/search?query=salsa",
+			"_type": "request"
+		},
+		{
+			"_id": "req_9aa8f854754a459f982b4bc0673548ba",
+			"authentication": {},
+			"body": {},
+			"created": 1553586521929,
+			"description": "",
+			"headers": [],
+			"isPrivate": false,
+			"metaSortKey": -1553586456539,
+			"method": "GET",
+			"modified": 1553610006739,
+			"name": "Favourites",
+			"parameters": [],
+			"parentId": "fld_9583d566e0e04dc9b0106684e3ec93c9",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "{{ baseUrl  }}/videos/favourites",
+			"_type": "request"
+		},
+		{
+			"_id": "req_52e44a3da02e4289899374a712182cd0",
+			"authentication": {},
+			"body": {
+				"mimeType": "application/json",
+				"text": "{\n\t\"isFavourite\": true\n}"
+			},
+			"created": 1553586549530,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_c1afc9dc5aec45d9b4c6dac3d17afad0",
+					"name": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1553586549530,
+			"method": "PATCH",
+			"modified": 1553685932966,
+			"name": "Manage Favorite",
+			"parameters": [],
+			"parentId": "fld_9583d566e0e04dc9b0106684e3ec93c9",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "{{ baseUrl  }}/videos/ZEq54f1q0Xs/",
+			"_type": "request"
+		}
+	]
+}
